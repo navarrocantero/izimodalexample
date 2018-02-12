@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>iziModal</title>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
+          integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy"
+          crossorigin="anonymous">
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous">
+
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"
+            integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+            crossorigin="anonymous">
+
+    </script>
+
+    <script src="js/iziModal.js"></script>
+    <script src="js/proyecto.js"></script>
+    <link rel="stylesheet" href="css/iziModal.css">
+</head>
+<body>
+<div class="container">
+    <h1 class="text-center">iziModal</h1>
+    <div class="card col-12 d-inline-flex">
+        <div class="row p-5">
+            <button id="abrirModalUnoCentrado" class="btn btn-danger mr-2 col-2">abrir</button>
+            <span class="card-text">Modal centrado </span>
+            <a href="" data-izimodal-open="#modalUnoCentrado" class="ml-2">Link </a>
+            <div id="modalUnoCentrado" class="iziModal text-center">
+            </div>
+        </div>
+    </div>
+
+    <div class="card col-12 d-inline-flex">
+        <div class="row p-5">
+            <button id="abrirModalUnoAbajo" class="btn btn-success mr-2 col-2">abrir</button>
+            <span class="card-text">Modal abajo </span>
+            <a href="" data-izimodal-open="#modalUnoAbajo" class="ml-2">Link </a>
+            <div id="modalUnoAbajo" class="iziModal">
+            </div>
+        </div>
+    </div>
+
+    <div class="card col-12 d-inline-flex">
+        <div class="row p-5">
+            <button id="abrirModalUnoSuperior" class="btn btn-warning mr-2 col-2"> abrir</button>
+
+            <span class="card-text">Modal Superior </span>
+
+
+            <a href="" data-izimodal-open="#modalUnoSuperior" class="ml-2">Link </a>
+            <div id="modalUnoSuperior" class="iziModal">
+                <p class="text-center">WARNING SUPERIOR</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card col-12 d-inline-flex">
+        <div class="row p-5">
+            <button id="abrirModalCuatro" class="btn btn-dark mr-2 col-2"> abrir</button>
+
+            <span class="card-text ">ProgressBar </span>
+
+
+            <div id="modalCuatro" class="iziModal modal">
+            </div>
+        </div>
+    </div>
+
+    <div class="card col-12 d-inline-flex">
+        <div class="row p-5">
+            <button id="abrirModalDos" class="btn btn-primary mr-2 col-2" onclick="animacion() "> abrir</button>
+
+            <span class="card-text ">Animaciones de entrada y salida </span>
+
+
+            <div id="modalDos" class="iziModal modal">
+            </div>
+        </div>
+    </div>
+
+    <div class="card col-12 d-inline-flex">
+        <div class="row p-5">
+            <button id="abrirModalTres" class="btn btn-secondary mr-2 col-2"> abrir</button>
+
+            <span class="card-text ">Divs </span>
+
+
+        </div>
+    </div>
+
+    <div class="iziModal">
+        <div id="modalTres" >
+
+            <form class="form-horizontal" role="form" method="POST" action="/register">
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <h2>Register New User</h2>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 field-label-responsive">
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-user"></i></div>
+                                <input type="text" name="name" class="form-control" id="name"
+                                       placeholder="John Doe" required autofocus>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-control-feedback">
+                        <span class="text-danger align-middle">
+                            <!-- Put name validation error messages here -->
+                        </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 field-label-responsive">
+                        <label for="email">E-Mail Address</label>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-at"></i></div>
+                                <input type="text" name="email" class="form-control" id="email"
+                                       placeholder="you@example.com" required autofocus>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-control-feedback">
+                        <span class="text-danger align-middle">
+                            <!-- Put e-mail validation error messages here -->
+                        </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 field-label-responsive">
+                        <label for="password">Password</label>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group has-danger">
+                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-key"></i></div>
+                                <input type="password" name="password" class="form-control" id="password"
+                                       placeholder="Password" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-control-feedback">
+                        <span class="text-danger align-middle">
+                            <i class="fa fa-close"> Example Error Message</i>
+                        </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 field-label-responsive">
+                        <label for="password">Confirm Password</label>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                <div class="input-group-addon" style="width: 2.6rem">
+                                    <i class="fa fa-repeat"></i>
+                                </div>
+                                <input type="password" name="password-confirmation" class="form-control"
+                                       id="password-confirm" placeholder="Password" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <button type="submit" class="btn btn-success"><i class="fa fa-user-plus"></i> Register</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
